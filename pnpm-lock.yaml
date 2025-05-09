@@ -52,7 +52,7 @@ importers:
         version: 4.15.0(magicast@0.3.5)(rollup@4.28.1)(vue@3.5.13(typescript@5.7.3))
       '@vee-validate/zod':
         specifier: ^4.15.0
-        version: 4.15.0(vue@3.5.13(typescript@5.7.3))(zod@3.24.1)
+        version: 4.15.0(vue@3.5.13(typescript@5.7.3))(zod@3.24.4)
       '@vercel/analytics':
         specifier: ^1.5.0
         version: 1.5.0(vue-router@4.5.0(vue@3.5.13(typescript@5.7.3)))(vue@3.5.13(typescript@5.7.3))
@@ -117,8 +117,8 @@ importers:
         specifier: ^1.4.0
         version: 1.4.0
       zod:
-        specifier: ^3.24.0
-        version: 3.24.1
+        specifier: ^3.24.4
+        version: 3.24.4
     devDependencies:
       '@nuxt/devtools':
         specifier: ^1.6.1
@@ -198,7 +198,7 @@ importers:
         version: 8.57.0
       openai:
         specifier: ^4.85.1
-        version: 4.85.1(ws@8.18.0)(zod@3.24.1)
+        version: 4.85.1(ws@8.18.0)(zod@3.24.4)
       prisma:
         specifier: ^6.1.0
         version: 6.1.0
@@ -209,8 +209,8 @@ importers:
         specifier: ^0.10.22
         version: 0.10.22(@trpc/client@10.45.2(@trpc/server@10.45.2))(@trpc/server@10.45.2)(ofetch@1.4.1)
       zod:
-        specifier: ^3.24.0
-        version: 3.24.1
+        specifier: ^3.24.4
+        version: 3.24.4
 
   packages/auth:
     dependencies:
@@ -251,8 +251,8 @@ importers:
         specifier: workspace:*
         version: link:../utils
       zod:
-        specifier: ^3.24.0
-        version: 3.24.1
+        specifier: ^3.24.4
+        version: 3.24.4
     devDependencies:
       eslint:
         specifier: 8.57.0
@@ -280,8 +280,8 @@ importers:
         specifier: ^6.1.0
         version: 6.1.0
       zod:
-        specifier: ^3.24.0
-        version: 3.24.1
+        specifier: ^3.24.4
+        version: 3.24.4
       zod-prisma-types:
         specifier: ^3.2.1
         version: 3.2.1(@prisma/client@6.1.0(prisma@6.1.0))(prisma@6.1.0)
@@ -8563,8 +8563,8 @@ packages:
       '@prisma/client': ^4.x.x || ^5.x.x || ^6.x.x
       prisma: ^4.x.x || ^5.x.x || ^6.x.x
 
-  zod@3.24.1:
-    resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
+  zod@3.24.4:
+    resolution: {integrity: sha512-OdqJE9UDRPwWsrHjLN2F8bPxvwJBK22EHLWtanu0LSYr5YqzsaaW3RMgmjwr8Rypg5k+meEJdSPXJZXE/yqOMg==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -11987,11 +11987,11 @@ snapshots:
       - supports-color
       - vue
 
-  '@vee-validate/zod@4.15.0(vue@3.5.13(typescript@5.7.3))(zod@3.24.1)':
+  '@vee-validate/zod@4.15.0(vue@3.5.13(typescript@5.7.3))(zod@3.24.4)':
     dependencies:
       type-fest: 4.30.1
       vee-validate: 4.15.0(vue@3.5.13(typescript@5.7.3))
-      zod: 3.24.1
+      zod: 3.24.4
     transitivePeerDependencies:
       - vue
 
@@ -16666,7 +16666,7 @@ snapshots:
       is-docker: 2.2.1
       is-wsl: 2.2.0
 
-  openai@4.85.1(ws@8.18.0)(zod@3.24.1):
+  openai@4.85.1(ws@8.18.0)(zod@3.24.4):
     dependencies:
       '@types/node': 18.19.76
       '@types/node-fetch': 2.6.12
@@ -16677,7 +16677,7 @@ snapshots:
       node-fetch: 2.7.0
     optionalDependencies:
       ws: 8.18.0
-      zod: 3.24.1
+      zod: 3.24.4
     transitivePeerDependencies:
       - encoding
 
@@ -19192,8 +19192,8 @@ snapshots:
       code-block-writer: 12.0.0
       lodash: 4.17.21
       prisma: 6.1.0
-      zod: 3.24.1
+      zod: 3.24.4
 
-  zod@3.24.1: {}
+  zod@3.24.4: {}
 
   zwitch@2.0.4: {}
