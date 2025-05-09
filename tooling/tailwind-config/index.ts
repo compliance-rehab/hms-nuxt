@@ -94,7 +94,7 @@ export default {
         sm: "calc(0.75rem - 4px)",
       },
       fontFamily: {
-        // sans: ["Poppins", "sans-serif"],
+        // sans: ["Poppins", "sans-serif"], // Not the Mary you thought it was
         sans: ["Inter", "sans-serif"],
         display: ["Lexend", "sans-serif"],
       },
