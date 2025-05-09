@@ -68,11 +68,11 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [
-        {
-          rel: "icon",
-          type: "image/png",
-          href: "/icon.png",
-        },
+        // {
+        //  rel: "icon",
+        //  type: "image/x-icon",
+        //  href: "/favicon.ico",
+        // },
       ],
     },
   },
@@ -118,7 +118,8 @@ export default defineNuxtConfig({
   googleFonts: {
     display: "swap",
     families: {
-      Poppins: [400, 500, 600, 700],
+      Inter: [400, 500, 600, 700],
+      Lexend: [400, 700]
     },
   },
 

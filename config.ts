@@ -48,10 +48,14 @@ export const config = {
     sessionCookieMaxAge: 60 * 60 * 24 * 30,
   },
   mails: {
-    from: "hello@your-domain.com",
+    from: "Griffin@hipaamadesimple.io",
   },
   teams: {
     avatarColors: ["#4E6DF5", "#E5A158", "#9DBEE5", "#CED3D9"],
+  },
+
+  mailing: {
+    provider: "plunk", // Set Plunk as the provider
   },
 } as const satisfies Config;
 
@@ -81,6 +85,9 @@ export type Config = {
   };
   teams: {
     avatarColors: string[];
+  };
+  mailing: {
+    provider: string; // Define the type for the new property
   };
 };
 

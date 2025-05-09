@@ -10,11 +10,15 @@ export const lightVariables = {
   colors: {
     border: "#d8dee6",
     input: "#c7ced8",
-    ring: "#0a9379",
-    background: "#f5f5f8",
+    ring: "#2563eb",   // **CHANGED:** Ring color to match primary blue
+    // ring: "#0a9379",
+    background: "#ffffff", // **CHANGED:** White background like the screenshot
+    // background: "#f5f5f8",
     foreground: "#292b35",
-    primary: "#0a9379",
-    "primary-foreground": "#f6f7f9",
+    primary: "#2563eb",   // **CHANGED:** Primary color to blue from screenshot
+   "primary-foreground": "#ffffff", // **CHANGED:** White text for primary elements
+    // primary: "#0a9379",
+    // "primary-foreground": "#f6f7f9",
     secondary: "#292b35",
     "secondary-foreground": "#ffffff",
     destructive: "#ef4444",
@@ -38,10 +42,12 @@ export const darkVariables = {
   colors: {
     border: "#282c34",
     input: "#333741",
-    ring: "#48d3a0",
+    ring: "#2563eb",     // **CHANGED:** Ring color to match primary blue
+    // ring: "#48d3a0",
     background: "#12181d",
     foreground: "#e9eef3",
-    primary: "#48d3a0",
+    primary: "#2563eb",
+    // primary: "#48d3a0",
     "primary-foreground": "#091521",
     secondary: "#e9eef3",
     "secondary-foreground": "#091521",
@@ -88,7 +94,9 @@ export default {
         sm: "calc(0.75rem - 4px)",
       },
       fontFamily: {
-        sans: ["Poppins", "sans-serif"],
+        // sans: ["Poppins", "sans-serif"],
+        sans: ["Inter", "sans-serif"],
+        display: ["Lexend", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

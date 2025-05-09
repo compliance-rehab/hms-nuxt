@@ -16,20 +16,22 @@
           New:
         </span>
         <span class="ml-1 block font-medium">
-          Amazing feature of your SaaS
+          Automatic Compliance Documentation
         </span>
       </div>
     </div>
 
     <h1
-      class="mx-auto max-w-3xl text-balance text-5xl font-bold text-foreground lg:text-7xl"
+      class="mx-auto max-w-3xl text-balance font-display text-5xl font-bold text-foreground lg:text-7xl"
     >
-      Your revolutionary Nuxt 3 SaaS
+      HIPAA 
+      <span class="mx-auto max-w-3xl text-balance font-display text-5xl font-bold text-primary lg:text-7xl"><u>Made Simple</u> </span>
+      for Small Healthcare
     </h1>
 
     <p class="mx-auto mt-4 max-w-xl text-balance text-lg text-foreground/60">
-      This is a demo application built with supastarter. It will save you a lot
-      of time and effort building your next SaaS.
+      A continuous monitoring and guided compliance system that helps you maintain 
+      HIPAA compliance faster-while adding hours back to your day.
     </p>
 
     <div
@@ -50,7 +52,7 @@
       <h5
         class="text-xs font-semibold uppercase tracking-wider text-foreground/50"
       >
-        Built & shipped with these awesome tools
+        Trusted by Healthcare Organizations across the country
       </h5>
 
       <div

@@ -3,9 +3,7 @@
     <div class="container grid grid-cols-1 gap-6 lg:grid-cols-3">
       <div>
         <Logo class="opacity-50 grayscale" />
-        <p class="mt-3 text-sm opacity-70">
-          <a href="https://supastarter.dev">Built with supastarter</a>
-        </p>
+        
       </div>
 
       <div class="flex flex-col gap-2">

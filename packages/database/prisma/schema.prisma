@@ -1,6 +1,7 @@
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("MIGRATION_DATABASE_URL") // <-- ADD THIS LINE
 }
 
 generator client {
@@ -89,6 +90,7 @@ model Team {
   memberships  TeamMembership[]
   subscription Subscription?
   invitations  TeamInvitation[]
+  teamTasks    TeamTask[]
 }
 
 enum TeamMemberRole {
@@ -140,4 +142,106 @@ model Subscription {
   planId          String
   variantId       String
   nextPaymentDate DateTime?
+}
+
+enum Status {
+  Planned
+  In_Progress @map("In Progress")
+  Implemented
+  Verified
+  Blocked
+  Remediation
+  NA @map("N/A")
+  Backlog
+}
+
+model Function {
+  id        String     @id
+  createdAt DateTime   @default(now()) @map("created_at")
+  name      String     @unique
+  categories Category[]
+}
+
+model Category {
+  id          String        @id
+  createdAt   DateTime      @default(now()) @map("created_at")
+  name        String
+  function    String
+  functionRef Function      @relation(fields: [function], references: [id])
+  subcategories Subcategory[]
+
+  @@index([function])
+}
+
+model Subcategory {
+  id        String   @id
+  createdAt DateTime @default(now()) @map("created_at")
+  name      String
+  category  String
+  categoryRef Category @relation(fields: [category], references: [id])
+  tasks     Task[]
+
+  @@index([category])
+}
+
+model Task {
+  id          String     @id
+  createdAt   DateTime   @default(now()) @map("created_at")
+  name        String
+  subcategory String
+  taskSimple  String?    @map("task_simple")
+  subcategoryRef Subcategory @relation(fields: [subcategory], references: [id])
+  teamTasks   TeamTask[]
+  controlTasks ControlTasks[]
+
+  @@index([subcategory])
+}
+
+model TeamTask {
+  id        String   @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt DateTime @default(now()) @map("created_at")
+  task      String
+  team      String
+  Status    Status   @default(Planned) @map("Status")
+  taskRef   Task     @relation(fields: [task], references: [id])
+  teamRef   Team     @relation(fields: [team], references: [id])
+
+  @@unique([team, task])
+  @@index([task])
+  @@index([team])
+}
+
+model Control {
+  id        String   @id
+  createdAt DateTime @default(now()) @map("created_at")
+  name      String
+  type      String
+  standard  String?
+  tasks     ControlTasks[]
+}
+
+model ControlTasks {
+  id        BigInt   @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  task      String
+  control   String
+  taskRef   Task     @relation(fields: [task], references: [id])
+  controlRef Control @relation(fields: [control], references: [id])
+
+  @@index([task])
+  @@index([control])
+}
+
+model Risk {
+  id                BigInt   @id @default(autoincrement())
+  createdAt         DateTime @default(now()) @map("created_at")
+  name              String
+  description       String
+  riskGroups        String   @map("risk_groups")
+  securityPrinciples String  @map("security_principles")
+}
+
+model Standard {
+  id        String   @id
+  createdAt DateTime @default(now()) @map("created_at")
 }
