@@ -22,7 +22,7 @@ describe("homepage", () => {
     it("should show banner on initial load", () => {
       const banner = cy.get('[data-test="banner"]');
       banner.should("exist");
-      banner.should("contain.text", "New: Automatic Compliance Documentation ");
+      banner.should("contain.text", "New:  Automatic Compliance Documentation ");
     });
   });
 
